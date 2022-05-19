@@ -1,0 +1,531 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="stylesheet" href="third-party/jquery-ui.min.css">
+	<link rel="stylesheet" href="third-party/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="third-party/jquery-ui.theme.min.css">
+	
+	<script src="third-party/jquery-3.6.0.min.js"></script>
+	<script src="third-party/jquery-ui.min.js"></script>
+	<script src="type.js"></script>
+		
+	<style>
+	
+	@font-face {
+		font-family: 'meera_inimairegular';
+		src: url('font/meerainimai-regular.woff2') format('woff2'),
+			 url('font/meerainimai-regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	body
+	{
+		font-family: 'meera_inimairegular';		
+		min-width:500px;	
+	}
+	
+	#typed {
+		padding: 4px;
+		width:250px;
+	}
+	
+	.type-text {
+		padding: 2px;
+	}
+	
+	.hidden {
+		display:none;
+	}
+	
+	.show {
+		display:inline;
+	}
+	
+	button.ui-widget {
+		font-size:13px;
+	}
+	
+	.small-text td button {
+		font-size:10px;
+	}
+	
+	input {
+		font-family: 'meera_inimairegular';	
+	}
+	
+	.small-button {
+		font-size:10px;
+	}
+	
+	a {
+		cursor:pointer;
+	}
+	a:hover {
+		color:red;
+	}
+	
+	</style>
+	
+</head>
+<body>
+	<table>
+	<tr>
+		<td> தமிழ்  Type</td>
+	
+		<td> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<a id="basic" class="small-button">Basic</a> 
+		<a id="more" class="small-button">More</a> 
+		
+		 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<span id="copiedmessage" class="hidden">Copied !</span>
+		
+		</td>
+	</tr>
+	</table>
+	
+	
+	<input id="typed" height="500"  type="text" value="" placeholder="">
+	
+	<a id="space" class="ui-button ui-widget ui-corner-all">Space</a>
+	<a id="dot" class="ui-button ui-widget ui-corner-all">.</a>
+	
+	<a id="clear" class="ui-button ui-widget ui-corner-all">Clear</a>		
+	<a id="copy" class="ui-button ui-widget ui-corner-all">COPY</a>
+	
+	<hr>
+	<table id="basicletters">
+		<tr>
+			<td>  </td>
+			<td> <button data-attr="அ" class="ui-button ui-widget ui-corner-all type-text">அ</button> </td>
+			<td> <button data-attr="ஆ" class="ui-button ui-widget ui-corner-all type-text">ஆ</button> </td>
+			<td> <button data-attr="இ" class="ui-button ui-widget ui-corner-all type-text">இ</button> </td>
+			<td> <button data-attr="ஈ" class="ui-button ui-widget ui-corner-all type-text">ஈ</button> </td>
+			<td> <button data-attr="உ" class="ui-button ui-widget ui-corner-all type-text">உ</button> </td>
+			<td> <button data-attr="ஊ" class="ui-button ui-widget ui-corner-all type-text">ஊ</button> </td>
+			<td> <button data-attr="எ" class="ui-button ui-widget ui-corner-all type-text">எ</button> </td>
+			<td> <button data-attr="ஏ" class="ui-button ui-widget ui-corner-all type-text">ஏ</button> </td>
+			<td> <button data-attr="ஐ" class="ui-button ui-widget ui-corner-all type-text">ஐ</button> </td>
+			<td> <button data-attr="ஒ" class="ui-button ui-widget ui-corner-all type-text">ஒ</button> </td>
+			<td> <button data-attr="ஓ" class="ui-button ui-widget ui-corner-all type-text">ஓ</button> </td>
+			<td> <button data-attr="ஔ" class="ui-button ui-widget ui-corner-all type-text">ஔ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="க்" class="ui-button ui-widget ui-corner-all type-text">க்</button> </td>
+			<td> <button data-attr="க" class="ui-button ui-widget ui-corner-all type-text">க</button> </td>
+			<td> <button data-attr="கா" class="ui-button ui-widget ui-corner-all type-text">கா</button> </td>
+			<td> <button data-attr="கி" class="ui-button ui-widget ui-corner-all type-text">கி</button> </td>
+			<td> <button data-attr="கீ" class="ui-button ui-widget ui-corner-all type-text">கீ</button> </td>
+			<td> <button data-attr="கு" class="ui-button ui-widget ui-corner-all type-text">கு</button> </td>
+			<td> <button data-attr="கூ" class="ui-button ui-widget ui-corner-all type-text">கூ</button> </td>
+			<td> <button data-attr="கெ" class="ui-button ui-widget ui-corner-all type-text">கெ</button> </td>
+			<td> <button data-attr="கே" class="ui-button ui-widget ui-corner-all type-text">கே</button> </td>
+			<td> <button data-attr="கை" class="ui-button ui-widget ui-corner-all type-text">கை</button> </td>
+			<td> <button data-attr="கொ" class="ui-button ui-widget ui-corner-all type-text">கொ</button> </td>
+			<td> <button data-attr="கோ" class="ui-button ui-widget ui-corner-all type-text">கோ</button> </td>
+			<td> <button data-attr="கௌ" class="ui-button ui-widget ui-corner-all type-text">கௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ங்" class="ui-button ui-widget ui-corner-all type-text">ங்</button> </td>
+			<td> <button data-attr="ங" class="ui-button ui-widget ui-corner-all type-text">ங</button> </td>
+			<td> <button data-attr="ஙா" class="ui-button ui-widget ui-corner-all type-text">ஙா</button> </td>
+			<td> <button data-attr="ஙி" class="ui-button ui-widget ui-corner-all type-text">ஙி</button> </td>
+			<td> <button data-attr="ஙீ" class="ui-button ui-widget ui-corner-all type-text">ஙீ</button> </td>
+			<td> <button data-attr="ஙு" class="ui-button ui-widget ui-corner-all type-text">ஙு</button> </td>
+			<td> <button data-attr="ஙூ" class="ui-button ui-widget ui-corner-all type-text">ஙூ</button> </td>
+			<td> <button data-attr="ஙெ" class="ui-button ui-widget ui-corner-all type-text">ஙெ</button> </td>
+			<td> <button data-attr="ஙே" class="ui-button ui-widget ui-corner-all type-text">ஙே</button> </td>
+			<td> <button data-attr="ஙை" class="ui-button ui-widget ui-corner-all type-text">ஙை</button> </td>
+			<td> <button data-attr="ஙொ" class="ui-button ui-widget ui-corner-all type-text">ஙொ</button> </td>
+			<td> <button data-attr="ஙோ" class="ui-button ui-widget ui-corner-all type-text">ஙோ</button> </td>
+			<td> <button data-attr="ஞௌ" class="ui-button ui-widget ui-corner-all type-text">ஞௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ச்" class="ui-button ui-widget ui-corner-all type-text">ச்</button> </td>
+			<td> <button data-attr="ச" class="ui-button ui-widget ui-corner-all type-text">ச</button> </td>
+			<td> <button data-attr="சா" class="ui-button ui-widget ui-corner-all type-text">சா</button> </td>
+			<td> <button data-attr="சி" class="ui-button ui-widget ui-corner-all type-text">சி</button> </td>
+			<td> <button data-attr="சீ" class="ui-button ui-widget ui-corner-all type-text">சீ</button> </td>
+			<td> <button data-attr="சு" class="ui-button ui-widget ui-corner-all type-text">சு</button> </td>
+			<td> <button data-attr="சூ" class="ui-button ui-widget ui-corner-all type-text">சூ</button> </td>
+			<td> <button data-attr="செ" class="ui-button ui-widget ui-corner-all type-text">செ</button> </td>
+			<td> <button data-attr="சே" class="ui-button ui-widget ui-corner-all type-text">சே</button> </td>
+			<td> <button data-attr="சை" class="ui-button ui-widget ui-corner-all type-text">சை</button> </td>
+			<td> <button data-attr="சொ" class="ui-button ui-widget ui-corner-all type-text">சொ</button> </td>
+			<td> <button data-attr="சோ" class="ui-button ui-widget ui-corner-all type-text">சோ</button> </td>
+			<td> <button data-attr="சௌ" class="ui-button ui-widget ui-corner-all type-text">சௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ஞ்" class="ui-button ui-widget ui-corner-all type-text">ஞ்</button> </td>
+			<td> <button data-attr="ஞ" class="ui-button ui-widget ui-corner-all type-text">ஞ</button> </td>
+			<td> <button data-attr="ஞா" class="ui-button ui-widget ui-corner-all type-text">ஞா</button> </td>
+			<td> <button data-attr="ஞி" class="ui-button ui-widget ui-corner-all type-text">ஞி</button> </td>
+			<td> <button data-attr="ஞீ" class="ui-button ui-widget ui-corner-all type-text">ஞீ</button> </td>
+			<td> <button data-attr="ஞு" class="ui-button ui-widget ui-corner-all type-text">ஞு</button> </td>
+			<td> <button data-attr="ஞூ" class="ui-button ui-widget ui-corner-all type-text">ஞூ</button> </td>
+			<td> <button data-attr="ஞெ" class="ui-button ui-widget ui-corner-all type-text">ஞெ</button> </td>
+			<td> <button data-attr="ஞே" class="ui-button ui-widget ui-corner-all type-text">ஞே</button> </td>
+			<td> <button data-attr="ஞை" class="ui-button ui-widget ui-corner-all type-text">ஞை</button> </td>
+			<td> <button data-attr="ஞொ" class="ui-button ui-widget ui-corner-all type-text">ஞொ</button> </td>
+			<td> <button data-attr="ஞோ" class="ui-button ui-widget ui-corner-all type-text">ஞோ</button> </td>
+			<td> <button data-attr="ஞௌ" class="ui-button ui-widget ui-corner-all type-text">ஞௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ட்" class="ui-button ui-widget ui-corner-all type-text">ட்</button> </td>
+			<td> <button data-attr="ட" class="ui-button ui-widget ui-corner-all type-text">ட</button> </td>
+			<td> <button data-attr="டா" class="ui-button ui-widget ui-corner-all type-text">டா</button> </td>
+			<td> <button data-attr="டி" class="ui-button ui-widget ui-corner-all type-text">டி</button> </td>
+			<td> <button data-attr="டீ" class="ui-button ui-widget ui-corner-all type-text">டீ</button> </td>
+			<td> <button data-attr="டு" class="ui-button ui-widget ui-corner-all type-text">டு</button> </td>
+			<td> <button data-attr="டூ" class="ui-button ui-widget ui-corner-all type-text">டூ</button> </td>
+			<td> <button data-attr="டெ" class="ui-button ui-widget ui-corner-all type-text">டெ</button> </td>
+			<td> <button data-attr="டே" class="ui-button ui-widget ui-corner-all type-text">டே</button> </td>
+			<td> <button data-attr="டை" class="ui-button ui-widget ui-corner-all type-text">டை</button> </td>
+			<td> <button data-attr="டொ" class="ui-button ui-widget ui-corner-all type-text">டொ</button> </td>
+			<td> <button data-attr="டோ" class="ui-button ui-widget ui-corner-all type-text">டோ</button> </td>
+			<td> <button data-attr="டௌ" class="ui-button ui-widget ui-corner-all type-text">டௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ண்" class="ui-button ui-widget ui-corner-all type-text">ண்</button> </td>
+			<td> <button data-attr="ண" class="ui-button ui-widget ui-corner-all type-text">ண</button> </td>
+			<td> <button data-attr="ணா" class="ui-button ui-widget ui-corner-all type-text">ணா</button> </td>
+			<td> <button data-attr="ணி" class="ui-button ui-widget ui-corner-all type-text">ணி</button> </td>
+			<td> <button data-attr="ணீ" class="ui-button ui-widget ui-corner-all type-text">ணீ</button> </td>
+			<td> <button data-attr="ணு" class="ui-button ui-widget ui-corner-all type-text">ணு</button> </td>
+			<td> <button data-attr="ணூ" class="ui-button ui-widget ui-corner-all type-text">ணூ</button> </td>
+			<td> <button data-attr="ணெ" class="ui-button ui-widget ui-corner-all type-text">ணெ</button> </td>
+			<td> <button data-attr="ணே" class="ui-button ui-widget ui-corner-all type-text">ணே</button> </td>
+			<td> <button data-attr="ணை" class="ui-button ui-widget ui-corner-all type-text">ணை</button> </td>
+			<td> <button data-attr="ணொ" class="ui-button ui-widget ui-corner-all type-text">ணொ</button> </td>
+			<td> <button data-attr="ணோ" class="ui-button ui-widget ui-corner-all type-text">ணோ</button> </td>
+			<td> <button data-attr="ணௌ" class="ui-button ui-widget ui-corner-all type-text">ணௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="த்" class="ui-button ui-widget ui-corner-all type-text">த்</button> </td>
+			<td> <button data-attr="த" class="ui-button ui-widget ui-corner-all type-text">த</button> </td>
+			<td> <button data-attr="தா" class="ui-button ui-widget ui-corner-all type-text">தா</button> </td>
+			<td> <button data-attr="தி" class="ui-button ui-widget ui-corner-all type-text">தி</button> </td>
+			<td> <button data-attr="தீ" class="ui-button ui-widget ui-corner-all type-text">தீ</button> </td>
+			<td> <button data-attr="து" class="ui-button ui-widget ui-corner-all type-text">து</button> </td>
+			<td> <button data-attr="தூ" class="ui-button ui-widget ui-corner-all type-text">தூ</button> </td>
+			<td> <button data-attr="தெ" class="ui-button ui-widget ui-corner-all type-text">தெ</button> </td>
+			<td> <button data-attr="தே" class="ui-button ui-widget ui-corner-all type-text">தே</button> </td>
+			<td> <button data-attr="தை" class="ui-button ui-widget ui-corner-all type-text">தை</button> </td>
+			<td> <button data-attr="தொ" class="ui-button ui-widget ui-corner-all type-text">தொ</button> </td>
+			<td> <button data-attr="தோ" class="ui-button ui-widget ui-corner-all type-text">தோ</button> </td>
+			<td> <button data-attr="தௌ" class="ui-button ui-widget ui-corner-all type-text">தௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ந்" class="ui-button ui-widget ui-corner-all type-text">ந்</button> </td>
+			<td> <button data-attr="ந" class="ui-button ui-widget ui-corner-all type-text">ந</button> </td>
+			<td> <button data-attr="நா" class="ui-button ui-widget ui-corner-all type-text">நா</button> </td>
+			<td> <button data-attr="நி" class="ui-button ui-widget ui-corner-all type-text">நி</button> </td>
+			<td> <button data-attr="நீ" class="ui-button ui-widget ui-corner-all type-text">நீ</button> </td>
+			<td> <button data-attr="நு" class="ui-button ui-widget ui-corner-all type-text">நு</button> </td>
+			<td> <button data-attr="நூ" class="ui-button ui-widget ui-corner-all type-text">நூ</button> </td>
+			<td> <button data-attr="நெ" class="ui-button ui-widget ui-corner-all type-text">நெ</button> </td>
+			<td> <button data-attr="நே" class="ui-button ui-widget ui-corner-all type-text">நே</button> </td>
+			<td> <button data-attr="நை" class="ui-button ui-widget ui-corner-all type-text">நை</button> </td>
+			<td> <button data-attr="நொ" class="ui-button ui-widget ui-corner-all type-text">நொ</button> </td>
+			<td> <button data-attr="நோ" class="ui-button ui-widget ui-corner-all type-text">நோ</button> </td>
+			<td> <button data-attr="நௌ" class="ui-button ui-widget ui-corner-all type-text">நௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ப்" class="ui-button ui-widget ui-corner-all type-text">ப்</button> </td>
+			<td> <button data-attr="ப" class="ui-button ui-widget ui-corner-all type-text">ப</button> </td>
+			<td> <button data-attr="பா" class="ui-button ui-widget ui-corner-all type-text">பா</button> </td>
+			<td> <button data-attr="பி" class="ui-button ui-widget ui-corner-all type-text">பி</button> </td>
+			<td> <button data-attr="பீ" class="ui-button ui-widget ui-corner-all type-text">பீ</button> </td>
+			<td> <button data-attr="பு" class="ui-button ui-widget ui-corner-all type-text">பு</button> </td>
+			<td> <button data-attr="பூ" class="ui-button ui-widget ui-corner-all type-text">பூ</button> </td>
+			<td> <button data-attr="பெ" class="ui-button ui-widget ui-corner-all type-text">பெ</button> </td>
+			<td> <button data-attr="பே" class="ui-button ui-widget ui-corner-all type-text">பே</button> </td>
+			<td> <button data-attr="பை" class="ui-button ui-widget ui-corner-all type-text">பை</button> </td>
+			<td> <button data-attr="பொ" class="ui-button ui-widget ui-corner-all type-text">பொ</button> </td>
+			<td> <button data-attr="போ" class="ui-button ui-widget ui-corner-all type-text">போ</button> </td>
+			<td> <button data-attr="பௌ" class="ui-button ui-widget ui-corner-all type-text">பௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ம்" class="ui-button ui-widget ui-corner-all type-text">ம்</button> </td>
+			<td> <button data-attr="ம" class="ui-button ui-widget ui-corner-all type-text">ம</button> </td>
+			<td> <button data-attr="மா" class="ui-button ui-widget ui-corner-all type-text">மா</button> </td>
+			<td> <button data-attr="மி" class="ui-button ui-widget ui-corner-all type-text">மி</button> </td>
+			<td> <button data-attr="மீ" class="ui-button ui-widget ui-corner-all type-text">மீ</button> </td>
+			<td> <button data-attr="மு" class="ui-button ui-widget ui-corner-all type-text">மு</button> </td>
+			<td> <button data-attr="மூ" class="ui-button ui-widget ui-corner-all type-text">மூ</button> </td>
+			<td> <button data-attr="மெ" class="ui-button ui-widget ui-corner-all type-text">மெ</button> </td>
+			<td> <button data-attr="மே" class="ui-button ui-widget ui-corner-all type-text">மே</button> </td>
+			<td> <button data-attr="மை" class="ui-button ui-widget ui-corner-all type-text">மை</button> </td>
+			<td> <button data-attr="மொ" class="ui-button ui-widget ui-corner-all type-text">மொ</button> </td>
+			<td> <button data-attr="மோ" class="ui-button ui-widget ui-corner-all type-text">மோ</button> </td>
+			<td> <button data-attr="மௌ" class="ui-button ui-widget ui-corner-all type-text">மௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ய்" class="ui-button ui-widget ui-corner-all type-text">ய்</button> </td>
+			<td> <button data-attr="ய" class="ui-button ui-widget ui-corner-all type-text">ய</button> </td>
+			<td> <button data-attr="யா" class="ui-button ui-widget ui-corner-all type-text">யா</button> </td>
+			<td> <button data-attr="யி" class="ui-button ui-widget ui-corner-all type-text">யி</button> </td>
+			<td> <button data-attr="யீ" class="ui-button ui-widget ui-corner-all type-text">யீ</button> </td>
+			<td> <button data-attr="யு" class="ui-button ui-widget ui-corner-all type-text">யு</button> </td>
+			<td> <button data-attr="யூ" class="ui-button ui-widget ui-corner-all type-text">யூ</button> </td>
+			<td> <button data-attr="யெ" class="ui-button ui-widget ui-corner-all type-text">யெ</button> </td>
+			<td> <button data-attr="யே" class="ui-button ui-widget ui-corner-all type-text">யே</button> </td>
+			<td> <button data-attr="யை" class="ui-button ui-widget ui-corner-all type-text">யை</button> </td>
+			<td> <button data-attr="யொ" class="ui-button ui-widget ui-corner-all type-text">யொ</button> </td>
+			<td> <button data-attr="யோ" class="ui-button ui-widget ui-corner-all type-text">யோ</button> </td>
+			<td> <button data-attr="யௌ" class="ui-button ui-widget ui-corner-all type-text">யௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ர்" class="ui-button ui-widget ui-corner-all type-text">ர்</button> </td>
+			<td> <button data-attr="ர" class="ui-button ui-widget ui-corner-all type-text">ர</button> </td>
+			<td> <button data-attr="ரா" class="ui-button ui-widget ui-corner-all type-text">ரா</button> </td>
+			<td> <button data-attr="ரி" class="ui-button ui-widget ui-corner-all type-text">ரி</button> </td>
+			<td> <button data-attr="ரீ" class="ui-button ui-widget ui-corner-all type-text">ரீ</button> </td>
+			<td> <button data-attr="ரு" class="ui-button ui-widget ui-corner-all type-text">ரு</button> </td>
+			<td> <button data-attr="ரூ" class="ui-button ui-widget ui-corner-all type-text">ரூ</button> </td>
+			<td> <button data-attr="ரெ" class="ui-button ui-widget ui-corner-all type-text">ரெ</button> </td>
+			<td> <button data-attr="ரே" class="ui-button ui-widget ui-corner-all type-text">ரே</button> </td>
+			<td> <button data-attr="ரை" class="ui-button ui-widget ui-corner-all type-text">ரை</button> </td>
+			<td> <button data-attr="ரொ" class="ui-button ui-widget ui-corner-all type-text">ரொ</button> </td>
+			<td> <button data-attr="ரோ" class="ui-button ui-widget ui-corner-all type-text">ரோ</button> </td>
+			<td> <button data-attr="ரௌ" class="ui-button ui-widget ui-corner-all type-text">ரௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ல்" class="ui-button ui-widget ui-corner-all type-text">ல்</button> </td>
+			<td> <button data-attr="ல" class="ui-button ui-widget ui-corner-all type-text">ல</button> </td>
+			<td> <button data-attr="லா" class="ui-button ui-widget ui-corner-all type-text">லா</button> </td>
+			<td> <button data-attr="லி" class="ui-button ui-widget ui-corner-all type-text">லி</button> </td>
+			<td> <button data-attr="லீ" class="ui-button ui-widget ui-corner-all type-text">லீ</button> </td>
+			<td> <button data-attr="லு" class="ui-button ui-widget ui-corner-all type-text">லு</button> </td>
+			<td> <button data-attr="லூ" class="ui-button ui-widget ui-corner-all type-text">லூ</button> </td>
+			<td> <button data-attr="லெ" class="ui-button ui-widget ui-corner-all type-text">லெ</button> </td>
+			<td> <button data-attr="லே" class="ui-button ui-widget ui-corner-all type-text">லே</button> </td>
+			<td> <button data-attr="லை" class="ui-button ui-widget ui-corner-all type-text">லை</button> </td>
+			<td> <button data-attr="லொ" class="ui-button ui-widget ui-corner-all type-text">லொ</button> </td>
+			<td> <button data-attr="லோ" class="ui-button ui-widget ui-corner-all type-text">லோ</button> </td>
+			<td> <button data-attr="லௌ" class="ui-button ui-widget ui-corner-all type-text">லௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="வ்" class="ui-button ui-widget ui-corner-all type-text">வ்</button> </td>
+			<td> <button data-attr="வ" class="ui-button ui-widget ui-corner-all type-text">வ</button> </td>
+			<td> <button data-attr="வா" class="ui-button ui-widget ui-corner-all type-text">வா</button> </td>
+			<td> <button data-attr="வி" class="ui-button ui-widget ui-corner-all type-text">வி</button> </td>
+			<td> <button data-attr="வீ" class="ui-button ui-widget ui-corner-all type-text">வீ</button> </td>
+			<td> <button data-attr="வு" class="ui-button ui-widget ui-corner-all type-text">வு</button> </td>
+			<td> <button data-attr="வூ" class="ui-button ui-widget ui-corner-all type-text">வூ</button> </td>
+			<td> <button data-attr="வெ" class="ui-button ui-widget ui-corner-all type-text">வெ</button> </td>
+			<td> <button data-attr="வே" class="ui-button ui-widget ui-corner-all type-text">வே</button> </td>
+			<td> <button data-attr="வை" class="ui-button ui-widget ui-corner-all type-text">வை</button> </td>
+			<td> <button data-attr="வொ" class="ui-button ui-widget ui-corner-all type-text">வொ</button> </td>
+			<td> <button data-attr="வோ" class="ui-button ui-widget ui-corner-all type-text">வோ</button> </td>
+			<td> <button data-attr="வௌ" class="ui-button ui-widget ui-corner-all type-text">வௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ழ்" class="ui-button ui-widget ui-corner-all type-text">ழ்</button> </td>
+			<td> <button data-attr="ழ" class="ui-button ui-widget ui-corner-all type-text">ழ</button> </td>
+			<td> <button data-attr="ழா" class="ui-button ui-widget ui-corner-all type-text">ழா</button> </td>
+			<td> <button data-attr="ழி" class="ui-button ui-widget ui-corner-all type-text">ழி</button> </td>
+			<td> <button data-attr="ழீ" class="ui-button ui-widget ui-corner-all type-text">ழீ</button> </td>
+			<td> <button data-attr="ழு" class="ui-button ui-widget ui-corner-all type-text">ழு</button> </td>
+			<td> <button data-attr="ழூ" class="ui-button ui-widget ui-corner-all type-text">ழூ</button> </td>
+			<td> <button data-attr="ழெ" class="ui-button ui-widget ui-corner-all type-text">ழெ</button> </td>
+			<td> <button data-attr="ழே" class="ui-button ui-widget ui-corner-all type-text">ழே</button> </td>
+			<td> <button data-attr="ழை" class="ui-button ui-widget ui-corner-all type-text">ழை</button> </td>
+			<td> <button data-attr="ழொ" class="ui-button ui-widget ui-corner-all type-text">ழொ</button> </td>
+			<td> <button data-attr="ழோ" class="ui-button ui-widget ui-corner-all type-text">ழோ</button> </td>
+			<td> <button data-attr="ழௌ" class="ui-button ui-widget ui-corner-all type-text">ழௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ள்" class="ui-button ui-widget ui-corner-all type-text">ள்</button> </td>
+			<td> <button data-attr="ள" class="ui-button ui-widget ui-corner-all type-text">ள</button> </td>
+			<td> <button data-attr="ளா" class="ui-button ui-widget ui-corner-all type-text">ளா</button> </td>
+			<td> <button data-attr="ளி" class="ui-button ui-widget ui-corner-all type-text">ளி</button> </td>
+			<td> <button data-attr="ளீ" class="ui-button ui-widget ui-corner-all type-text">ளீ</button> </td>
+			<td> <button data-attr="ளு" class="ui-button ui-widget ui-corner-all type-text">ளு</button> </td>
+			<td> <button data-attr="ளூ" class="ui-button ui-widget ui-corner-all type-text">ளூ</button> </td>
+			<td> <button data-attr="ளெ" class="ui-button ui-widget ui-corner-all type-text">ளெ</button> </td>
+			<td> <button data-attr="ளே" class="ui-button ui-widget ui-corner-all type-text">ளே</button> </td>
+			<td> <button data-attr="ளை" class="ui-button ui-widget ui-corner-all type-text">ளை</button> </td>
+			<td> <button data-attr="ளொ" class="ui-button ui-widget ui-corner-all type-text">ளொ</button> </td>
+			<td> <button data-attr="ளோ" class="ui-button ui-widget ui-corner-all type-text">ளோ</button> </td>
+			<td> <button data-attr="ளௌ" class="ui-button ui-widget ui-corner-all type-text">ளௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ற்" class="ui-button ui-widget ui-corner-all type-text">ற்</button> </td>
+			<td> <button data-attr="ற" class="ui-button ui-widget ui-corner-all type-text">ற</button> </td>
+			<td> <button data-attr="றா" class="ui-button ui-widget ui-corner-all type-text">றா</button> </td>
+			<td> <button data-attr="றி" class="ui-button ui-widget ui-corner-all type-text">றி</button> </td>
+			<td> <button data-attr="றீ" class="ui-button ui-widget ui-corner-all type-text">றீ</button> </td>
+			<td> <button data-attr="று" class="ui-button ui-widget ui-corner-all type-text">று</button> </td>
+			<td> <button data-attr="றூ" class="ui-button ui-widget ui-corner-all type-text">றூ</button> </td>
+			<td> <button data-attr="றெ" class="ui-button ui-widget ui-corner-all type-text">றெ</button> </td>
+			<td> <button data-attr="றே" class="ui-button ui-widget ui-corner-all type-text">றே</button> </td>
+			<td> <button data-attr="றை" class="ui-button ui-widget ui-corner-all type-text">றை</button> </td>
+			<td> <button data-attr="றொ" class="ui-button ui-widget ui-corner-all type-text">றொ</button> </td>
+			<td> <button data-attr="றோ" class="ui-button ui-widget ui-corner-all type-text">றோ</button> </td>
+			<td> <button data-attr="றௌ" class="ui-button ui-widget ui-corner-all type-text">றௌ</button> </td>
+		</tr>
+		
+		<tr>
+			<td> <button data-attr="ன்" class="ui-button ui-widget ui-corner-all type-text">ன்</button> </td>
+			<td> <button data-attr="ன" class="ui-button ui-widget ui-corner-all type-text">ன</button> </td>
+			<td> <button data-attr="னா" class="ui-button ui-widget ui-corner-all type-text">னா</button> </td>
+			<td> <button data-attr="னி" class="ui-button ui-widget ui-corner-all type-text">னி</button> </td>
+			<td> <button data-attr="னீ" class="ui-button ui-widget ui-corner-all type-text">னீ</button> </td>
+			<td> <button data-attr="னு" class="ui-button ui-widget ui-corner-all type-text">னு</button> </td>
+			<td> <button data-attr="னூ" class="ui-button ui-widget ui-corner-all type-text">னூ</button> </td>
+			<td> <button data-attr="னெ" class="ui-button ui-widget ui-corner-all type-text">னெ</button> </td>
+			<td> <button data-attr="னே" class="ui-button ui-widget ui-corner-all type-text">னே</button> </td>
+			<td> <button data-attr="னை" class="ui-button ui-widget ui-corner-all type-text">னை</button> </td>
+			<td> <button data-attr="னொ" class="ui-button ui-widget ui-corner-all type-text">னொ</button> </td>
+			<td> <button data-attr="னோ" class="ui-button ui-widget ui-corner-all type-text">னோ</button> </td>
+			<td> <button data-attr="னௌ" class="ui-button ui-widget ui-corner-all type-text">னௌ</button> </td>
+		</tr>
+		
+		
+		
+	</table>
+	
+	<table id="moreletters">
+	
+		<tr class="small-text">
+			<td>  </td>
+			<td> <button data-attr="அ" class="ui-button ui-widget ui-corner-all type-text">அ</button> </td>
+			<td> <button data-attr="ஆ" class="ui-button ui-widget ui-corner-all type-text">ஆ</button> </td>
+			<td> <button data-attr="இ" class="ui-button ui-widget ui-corner-all type-text">இ</button> </td>
+			<td> <button data-attr="ஈ" class="ui-button ui-widget ui-corner-all type-text">ஈ</button> </td>
+			<td> <button data-attr="உ" class="ui-button ui-widget ui-corner-all type-text">உ</button> </td>
+			<td> <button data-attr="ஊ" class="ui-button ui-widget ui-corner-all type-text">ஊ</button> </td>
+			<td> <button data-attr="எ" class="ui-button ui-widget ui-corner-all type-text">எ</button> </td>
+			<td> <button data-attr="ஏ" class="ui-button ui-widget ui-corner-all type-text">ஏ</button> </td>
+			<td> <button data-attr="ஐ" class="ui-button ui-widget ui-corner-all type-text">ஐ</button> </td>
+			<td> <button data-attr="ஒ" class="ui-button ui-widget ui-corner-all type-text">ஒ</button> </td>
+			<td> <button data-attr="ஓ" class="ui-button ui-widget ui-corner-all type-text">ஓ</button> </td>
+			<td> <button data-attr="ஔ" class="ui-button ui-widget ui-corner-all type-text">ஔ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ஶ்" class="ui-button ui-widget ui-corner-all type-text">ஶ்</button> </td>
+			<td> <button data-attr="ஶ" class="ui-button ui-widget ui-corner-all type-text">ஶ</button> </td>
+			<td> <button data-attr="ஶா" class="ui-button ui-widget ui-corner-all type-text">ஶா</button> </td>
+			<td> <button data-attr="ஶி" class="ui-button ui-widget ui-corner-all type-text">ஶி</button> </td>
+			<td> <button data-attr="ஶீ" class="ui-button ui-widget ui-corner-all type-text">ஶீ</button> </td>
+			<td> <button data-attr="ஶு" class="ui-button ui-widget ui-corner-all type-text">ஶு</button> </td>
+			<td> <button data-attr="ஶூ" class="ui-button ui-widget ui-corner-all type-text">ஶூ</button> </td>
+			<td> <button data-attr="ஶெ" class="ui-button ui-widget ui-corner-all type-text">ஶெ</button> </td>
+			<td> <button data-attr="ஶே" class="ui-button ui-widget ui-corner-all type-text">ஶே</button> </td>
+			<td> <button data-attr="ஶை" class="ui-button ui-widget ui-corner-all type-text">ஶை</button> </td>
+			<td> <button data-attr="ஶொ" class="ui-button ui-widget ui-corner-all type-text">ஶொ</button> </td>
+			<td> <button data-attr="ஶோ" class="ui-button ui-widget ui-corner-all type-text">ஶோ</button> </td>
+			<td> <button data-attr="ஶௌ" class="ui-button ui-widget ui-corner-all type-text">ஶௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ஜ்" class="ui-button ui-widget ui-corner-all type-text">ஜ்</button> </td>
+			<td> <button data-attr="ஜ" class="ui-button ui-widget ui-corner-all type-text">ஜ</button> </td>
+			<td> <button data-attr="ஜா" class="ui-button ui-widget ui-corner-all type-text">ஜா</button> </td>
+			<td> <button data-attr="ஜி" class="ui-button ui-widget ui-corner-all type-text">ஜி</button> </td>
+			<td> <button data-attr="ஜீ" class="ui-button ui-widget ui-corner-all type-text">ஜீ</button> </td>
+			<td> <button data-attr="ஜு" class="ui-button ui-widget ui-corner-all type-text">ஜு</button> </td>
+			<td> <button data-attr="ஜூ" class="ui-button ui-widget ui-corner-all type-text">ஜூ</button> </td>
+			<td> <button data-attr="ஜெ" class="ui-button ui-widget ui-corner-all type-text">ஜெ</button> </td>
+			<td> <button data-attr="ஜே" class="ui-button ui-widget ui-corner-all type-text">ஜே</button> </td>
+			<td> <button data-attr="ஜை" class="ui-button ui-widget ui-corner-all type-text">ஜை</button> </td>
+			<td> <button data-attr="ஜொ" class="ui-button ui-widget ui-corner-all type-text">ஜொ</button> </td>
+			<td> <button data-attr="ஜோ" class="ui-button ui-widget ui-corner-all type-text">ஜோ</button> </td>
+			<td> <button data-attr="ஜௌ" class="ui-button ui-widget ui-corner-all type-text">ஜௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ஷ்" class="ui-button ui-widget ui-corner-all type-text">ஷ்</button> </td>
+			<td> <button data-attr="ஷ" class="ui-button ui-widget ui-corner-all type-text">ஷ</button> </td>
+			<td> <button data-attr="ஷா" class="ui-button ui-widget ui-corner-all type-text">ஷா</button> </td>
+			<td> <button data-attr="ஷி" class="ui-button ui-widget ui-corner-all type-text">ஷி</button> </td>
+			<td> <button data-attr="ஷீ" class="ui-button ui-widget ui-corner-all type-text">ஷீ</button> </td>
+			<td> <button data-attr="ஷு" class="ui-button ui-widget ui-corner-all type-text">ஷு</button> </td>
+			<td> <button data-attr="ஷூ" class="ui-button ui-widget ui-corner-all type-text">ஷூ</button> </td>
+			<td> <button data-attr="ஷெ" class="ui-button ui-widget ui-corner-all type-text">ஷெ</button> </td>
+			<td> <button data-attr="ஷே" class="ui-button ui-widget ui-corner-all type-text">ஷே</button> </td>
+			<td> <button data-attr="ஷை" class="ui-button ui-widget ui-corner-all type-text">ஷை</button> </td>
+			<td> <button data-attr="ஷொ" class="ui-button ui-widget ui-corner-all type-text">ஷொ</button> </td>
+			<td> <button data-attr="ஷோ" class="ui-button ui-widget ui-corner-all type-text">ஷோ</button> </td>
+			<td> <button data-attr="ஷௌ" class="ui-button ui-widget ui-corner-all type-text">ஷௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ஸ்" class="ui-button ui-widget ui-corner-all type-text">ஸ்</button> </td>
+			<td> <button data-attr="ஸ" class="ui-button ui-widget ui-corner-all type-text">ஸ</button> </td>
+			<td> <button data-attr="ஸா" class="ui-button ui-widget ui-corner-all type-text">ஸா</button> </td>
+			<td> <button data-attr="ஸி" class="ui-button ui-widget ui-corner-all type-text">ஸி</button> </td>
+			<td> <button data-attr="ஸீ" class="ui-button ui-widget ui-corner-all type-text">ஸீ</button> </td>
+			<td> <button data-attr="ஸு" class="ui-button ui-widget ui-corner-all type-text">ஸு</button> </td>
+			<td> <button data-attr="ஸூ" class="ui-button ui-widget ui-corner-all type-text">ஸூ</button> </td>
+			<td> <button data-attr="ஸெ" class="ui-button ui-widget ui-corner-all type-text">ஸெ</button> </td>
+			<td> <button data-attr="ஸே" class="ui-button ui-widget ui-corner-all type-text">ஸே</button> </td>
+			<td> <button data-attr="ஸை" class="ui-button ui-widget ui-corner-all type-text">ஸை</button> </td>
+			<td> <button data-attr="ஸொ" class="ui-button ui-widget ui-corner-all type-text">ஸொ</button> </td>
+			<td> <button data-attr="ஸோ" class="ui-button ui-widget ui-corner-all type-text">ஸோ</button> </td>
+			<td> <button data-attr="ஸௌ" class="ui-button ui-widget ui-corner-all type-text">ஸௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="ஹ்" class="ui-button ui-widget ui-corner-all type-text">ஹ்</button> </td>
+			<td> <button data-attr="ஹ" class="ui-button ui-widget ui-corner-all type-text">ஹ</button> </td>
+			<td> <button data-attr="ஹா" class="ui-button ui-widget ui-corner-all type-text">ஹா</button> </td>
+			<td> <button data-attr="ஹி" class="ui-button ui-widget ui-corner-all type-text">ஹி</button> </td>
+			<td> <button data-attr="ஹீ" class="ui-button ui-widget ui-corner-all type-text">ஹீ</button> </td>
+			<td> <button data-attr="ஹு" class="ui-button ui-widget ui-corner-all type-text">ஹு</button> </td>
+			<td> <button data-attr="ஹூ" class="ui-button ui-widget ui-corner-all type-text">ஹூ</button> </td>
+			<td> <button data-attr="ஹெ" class="ui-button ui-widget ui-corner-all type-text">ஹெ</button> </td>
+			<td> <button data-attr="ஹே" class="ui-button ui-widget ui-corner-all type-text">ஹே</button> </td>
+			<td> <button data-attr="ஹை" class="ui-button ui-widget ui-corner-all type-text">ஹை</button> </td>
+			<td> <button data-attr="ஹொ" class="ui-button ui-widget ui-corner-all type-text">ஹொ</button> </td>
+			<td> <button data-attr="ஹோ" class="ui-button ui-widget ui-corner-all type-text">ஹோ</button> </td>
+			<td> <button data-attr="ஹௌ" class="ui-button ui-widget ui-corner-all type-text">ஹௌ</button> </td>
+		</tr>
+		
+		<tr class="small-text">
+			<td> <button data-attr="க்ஷ்" class="ui-button ui-widget ui-corner-all type-text">க்ஷ்</button> </td>
+			<td> <button data-attr="க்ஷ" class="ui-button ui-widget ui-corner-all type-text">க்ஷ</button> </td>
+			<td> <button data-attr="க்ஷா" class="ui-button ui-widget ui-corner-all type-text">க்ஷா</button> </td>
+			<td> <button data-attr="க்ஷி" class="ui-button ui-widget ui-corner-all type-text">க்ஷி</button> </td>
+			<td> <button data-attr="க்ஷீ" class="ui-button ui-widget ui-corner-all type-text">க்ஷீ</button> </td>
+			<td> <button data-attr="க்ஷு" class="ui-button ui-widget ui-corner-all type-text">க்ஷு</button> </td>
+			<td> <button data-attr="க்ஷூ" class="ui-button ui-widget ui-corner-all type-text">க்ஷூ</button> </td>
+			<td> <button data-attr="க்ஷெ" class="ui-button ui-widget ui-corner-all type-text">க்ஷெ</button> </td>
+			<td> <button data-attr="க்ஷே" class="ui-button ui-widget ui-corner-all type-text">க்ஷே</button> </td>
+			<td> <button data-attr="க்ஷை" class="ui-button ui-widget ui-corner-all type-text">க்ஷை</button> </td>
+			<td> <button data-attr="க்ஷொ" class="ui-button ui-widget ui-corner-all type-text">க்ஷொ</button> </td>
+			<td> <button data-attr="க்ஷோ" class="ui-button ui-widget ui-corner-all type-text">க்ஷோ</button> </td>
+			<td> <button data-attr="க்ஷௌ" class="ui-button ui-widget ui-corner-all type-text">க்ஷௌ</button> </td>
+		</tr>
+		
+		
+	</table>
+	
+	
+</body>
+</html>
+
